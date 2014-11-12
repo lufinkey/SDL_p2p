@@ -8,28 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A0435C3A1A13C600004EF945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C391A13C600004EF945 /* Foundation.framework */; };
-		A0435C491A13C600004EF945 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C481A13C600004EF945 /* SenTestingKit.framework */; };
-		A0435C4B1A13C600004EF945 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C4A1A13C600004EF945 /* UIKit.framework */; };
-		A0435C4C1A13C600004EF945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C391A13C600004EF945 /* Foundation.framework */; };
-		A0435C4F1A13C600004EF945 /* libSDL_p2p.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C361A13C600004EF945 /* libSDL_p2p.a */; };
-		A0435C551A13C600004EF945 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0435C531A13C600004EF945 /* InfoPlist.strings */; };
-		A0435C581A13C600004EF945 /* SDL_p2p_test.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435C571A13C600004EF945 /* SDL_p2p_test.m */; };
-		A0435C641A13C6A1004EF945 /* SDL_p2p.c in Sources */ = {isa = PBXBuildFile; fileRef = A0435C631A13C6A1004EF945 /* SDL_p2p.c */; };
 		A0C0789D1A13CBB300C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789C1A13CBB300C1BBA2 /* libSDL2.a */; };
 		A0C078A01A13CBBD00C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789F1A13CBBD00C1BBA2 /* libSDL2.a */; };
-		A0C078A11A13CBBE00C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789F1A13CBBD00C1BBA2 /* libSDL2.a */; };
-		A0C078A21A13CBC100C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789C1A13CBB300C1BBA2 /* libSDL2.a */; };
+		A0C078A41A13D3DE00C1BBA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */; };
+		A0C078A61A13D3E400C1BBA2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A51A13D3E400C1BBA2 /* GameKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A0435C4D1A13C600004EF945 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0435C2E1A13C600004EF945 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0435C351A13C600004EF945;
-			remoteInfo = SDL_p2p;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A0435C341A13C600004EF945 /* CopyFiles */ = {
@@ -46,13 +29,7 @@
 /* Begin PBXFileReference section */
 		A0435C361A13C600004EF945 /* libSDL_p2p.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDL_p2p.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0435C391A13C600004EF945 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A0435C471A13C600004EF945 /* SDL_p2p_test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDL_p2p_test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0435C481A13C600004EF945 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		A0435C4A1A13C600004EF945 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		A0435C521A13C600004EF945 /* SDL_p2p_test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDL_p2p_test-Info.plist"; sourceTree = "<group>"; };
-		A0435C541A13C600004EF945 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A0435C561A13C600004EF945 /* SDL_p2p_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_p2p_test.h; sourceTree = "<group>"; };
-		A0435C571A13C600004EF945 /* SDL_p2p_test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDL_p2p_test.m; sourceTree = "<group>"; };
 		A0435C631A13C6A1004EF945 /* SDL_p2p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_p2p.c; sourceTree = "<group>"; };
 		A0435C661A13C6B7004EF945 /* SDL_p2p.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_p2p.h; sourceTree = "<group>"; };
 		A0C0784E1A13CAB300C1BBA2 /* begin_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = begin_code.h; sourceTree = "<group>"; };
@@ -132,6 +109,8 @@
 		A0C078991A13CAB300C1BBA2 /* SDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL.h; sourceTree = "<group>"; };
 		A0C0789C1A13CBB300C1BBA2 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = "Release-iphoneos/libSDL2.a"; sourceTree = "<group>"; };
 		A0C0789F1A13CBBD00C1BBA2 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = "Release-iphonesimulator/libSDL2.a"; sourceTree = "<group>"; };
+		A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A0C078A51A13D3E400C1BBA2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,21 +119,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0435C3A1A13C600004EF945 /* Foundation.framework in Frameworks */,
+				A0C078A61A13D3E400C1BBA2 /* GameKit.framework in Frameworks */,
+				A0C078A41A13D3DE00C1BBA2 /* UIKit.framework in Frameworks */,
 				A0C0789D1A13CBB300C1BBA2 /* libSDL2.a in Frameworks */,
 				A0C078A01A13CBBD00C1BBA2 /* libSDL2.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0435C431A13C600004EF945 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0435C491A13C600004EF945 /* SenTestingKit.framework in Frameworks */,
-				A0435C4B1A13C600004EF945 /* UIKit.framework in Frameworks */,
-				A0435C4C1A13C600004EF945 /* Foundation.framework in Frameworks */,
-				A0435C4F1A13C600004EF945 /* libSDL_p2p.a in Frameworks */,
-				A0C078A11A13CBBE00C1BBA2 /* libSDL2.a in Frameworks */,
-				A0C078A21A13CBC100C1BBA2 /* libSDL2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				A0435C361A13C600004EF945 /* libSDL_p2p.a */,
-				A0435C471A13C600004EF945 /* SDL_p2p_test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,8 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				A0435C391A13C600004EF945 /* Foundation.framework */,
+				A0C078A51A13D3E400C1BBA2 /* GameKit.framework */,
+				A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */,
 				A0435C481A13C600004EF945 /* SenTestingKit.framework */,
-				A0435C4A1A13C600004EF945 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,18 +163,8 @@
 		A0435C501A13C600004EF945 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				A0C0784B1A13C9D200C1BBA2 /* iOS */,
 			);
 			path = test;
-			sourceTree = "<group>";
-		};
-		A0435C511A13C600004EF945 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0435C521A13C600004EF945 /* SDL_p2p_test-Info.plist */,
-				A0435C531A13C600004EF945 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A0435C621A13C6A1004EF945 /* src */ = {
@@ -223,16 +181,6 @@
 				A0435C661A13C6B7004EF945 /* SDL_p2p.h */,
 			);
 			path = include;
-			sourceTree = "<group>";
-		};
-		A0C0784B1A13C9D200C1BBA2 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				A0435C561A13C600004EF945 /* SDL_p2p_test.h */,
-				A0435C571A13C600004EF945 /* SDL_p2p_test.m */,
-				A0435C511A13C600004EF945 /* Supporting Files */,
-			);
-			path = iOS;
 			sourceTree = "<group>";
 		};
 		A0C0784C1A13CA5600C1BBA2 /* SDL */ = {
@@ -357,25 +305,6 @@
 			productReference = A0435C361A13C600004EF945 /* libSDL_p2p.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A0435C461A13C600004EF945 /* SDL_p2p_test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A0435C5E1A13C600004EF945 /* Build configuration list for PBXNativeTarget "SDL_p2p_test" */;
-			buildPhases = (
-				A0435C421A13C600004EF945 /* Sources */,
-				A0435C431A13C600004EF945 /* Frameworks */,
-				A0435C441A13C600004EF945 /* Resources */,
-				A0435C451A13C600004EF945 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0435C4E1A13C600004EF945 /* PBXTargetDependency */,
-			);
-			name = SDL_p2p_test;
-			productName = SDL_p2p_test;
-			productReference = A0435C471A13C600004EF945 /* SDL_p2p_test.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -398,37 +327,9 @@
 			projectRoot = "";
 			targets = (
 				A0435C351A13C600004EF945 /* SDL_p2p */,
-				A0435C461A13C600004EF945 /* SDL_p2p_test */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		A0435C441A13C600004EF945 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0435C551A13C600004EF945 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A0435C451A13C600004EF945 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0435C321A13C600004EF945 /* Sources */ = {
@@ -438,35 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0435C421A13C600004EF945 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0435C581A13C600004EF945 /* SDL_p2p_test.m in Sources */,
-				A0435C641A13C6A1004EF945 /* SDL_p2p.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A0435C4E1A13C600004EF945 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A0435C351A13C600004EF945 /* SDL_p2p */;
-			targetProxy = A0435C4D1A13C600004EF945 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A0435C531A13C600004EF945 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0435C541A13C600004EF945 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A0435C591A13C600004EF945 /* Debug */ = {
@@ -489,12 +362,13 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;
 		};
@@ -511,11 +385,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -554,44 +429,6 @@
 			};
 			name = Release;
 		};
-		A0435C5F1A13C600004EF945 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SDL_p2p/SDL_p2p-Prefix.pch";
-				INFOPLIST_FILE = "test/iOS/SDL_p2p_test-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../SDL/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../SDL/build/Release-iphonesimulator\"",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		A0435C601A13C600004EF945 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				INFOPLIST_FILE = "test/iOS/SDL_p2p_test-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../SDL/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../SDL/build/Release-iphonesimulator\"",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,15 +446,6 @@
 			buildConfigurations = (
 				A0435C5C1A13C600004EF945 /* Debug */,
 				A0435C5D1A13C600004EF945 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0435C5E1A13C600004EF945 /* Build configuration list for PBXNativeTarget "SDL_p2p_test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0435C5F1A13C600004EF945 /* Debug */,
-				A0435C601A13C600004EF945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
