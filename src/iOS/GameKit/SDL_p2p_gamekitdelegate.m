@@ -15,8 +15,6 @@
 	p2pSession = session;
 	
 	peers = [[NSMutableArray alloc] init];
-	maxConnections = 0;
-	totalConnections = 0;
 	
 	sessionID = [[NSString alloc] initWithUTF8String:"com.yourcompany.SDL_p2p"];
 	sessionMode = GKSessionModePeer;
@@ -47,11 +45,6 @@
 	return sessionID;
 }
 
-- (void)setMaximumConnections:(NSUInteger)max
-{
-	maxConnections = max;
-}
-
 - (NSString*)displayName
 {
 	return [gkSession displayName];
@@ -71,7 +64,6 @@
 {
 	if(peerPicker==nil)
 	{
-		totalConnections = 0;
 		sessionMode = GKSessionModePeer;
 		peerPicker = [[GKPeerPickerController alloc] init];
 		peerPicker.delegate = self;
@@ -84,7 +76,6 @@
 {
 	if(peerPicker==nil && gkSession==nil)
 	{
-		totalConnections = 0;
 		sessionMode = GKSessionModeServer;
 		peerPicker = [[GKPeerPickerController alloc] init];
 		peerPicker.delegate = self;
@@ -97,8 +88,6 @@
 {
 	if(peerPicker==nil && gkSession==nil)
 	{
-		totalConnections = 0;
-		maxConnections = 1;
 		sessionMode = GKSessionModeClient;
 		peerPicker = [[GKPeerPickerController alloc] init];
 		peerPicker.delegate = self;
@@ -194,11 +183,7 @@
     gkSession = session;
     session.delegate = self;
 	
-	totalConnections++;
-    if(totalConnections>=maxConnections && maxConnections!=0)
-	{
-		[self dismissPicker];
-	}
+	[self dismissPicker];
 }
 
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void*)context

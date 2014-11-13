@@ -11,8 +11,6 @@
 	GKSessionMode sessionMode;
 	GKPeerPickerController *peerPicker;
 	NSMutableArray *peers;
-	NSUInteger maxConnections;
-	NSUInteger totalConnections;
 	BOOL p2pconnected;
 }
 
@@ -20,8 +18,6 @@
 
 - (void)setSessionID:(NSString*)sessID;
 - (NSString*)sessionID;
-
-- (void)setMaximumConnections:(NSUInteger)max;
 
 - (NSString*)displayName;
 - (NSString*)displayNameForPeer:(NSString*)peerID;

@@ -30,7 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A0435C361A13C600004EF945 /* libSDL_p2p.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDL_p2p.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0435C361A13C600004EF945 /* libSDL_p2p.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDL_p2p.a; path = liblibSDL_p2p.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0435C391A13C600004EF945 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A0435C481A13C600004EF945 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A0435C631A13C6A1004EF945 /* SDL_p2p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_p2p.c; sourceTree = "<group>"; };
@@ -328,7 +328,8 @@
 			dependencies = (
 			);
 			name = libSDL_p2p;
-			productName = SDL_p2p;
+			productInstallPath = /usr/local/lib;
+			productName = "Static Library";
 			productReference = A0435C361A13C600004EF945 /* libSDL_p2p.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -428,7 +429,7 @@
 		A0435C5C1A13C600004EF945 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/SDL_p2p.dst;
+				DSTROOT = /tmp/libSDL_p2p.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,7 +437,7 @@
 					"\"$(SRCROOT)/../SDL/build/Release-iphonesimulator\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -444,7 +445,7 @@
 		A0435C5D1A13C600004EF945 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/SDL_p2p.dst;
+				DSTROOT = /tmp/libSDL_p2p.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,7 +453,7 @@
 					"\"$(SRCROOT)/../SDL/build/Release-iphonesimulator\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
