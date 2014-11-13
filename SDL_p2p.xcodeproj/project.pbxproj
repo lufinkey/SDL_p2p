@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A0435C3A1A13C600004EF945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C391A13C600004EF945 /* Foundation.framework */; };
+		A087DE5F1A1483FE00AA5D9A /* SDL_p2p.c in Sources */ = {isa = PBXBuildFile; fileRef = A0435C631A13C6A1004EF945 /* SDL_p2p.c */; };
+		A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.m in Sources */ = {isa = PBXBuildFile; fileRef = A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.m */; };
 		A0C0789D1A13CBB300C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789C1A13CBB300C1BBA2 /* libSDL2.a */; };
 		A0C078A01A13CBBD00C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789F1A13CBBD00C1BBA2 /* libSDL2.a */; };
 		A0C078A41A13D3DE00C1BBA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */; };
 		A0C078A61A13D3E400C1BBA2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A51A13D3E400C1BBA2 /* GameKit.framework */; };
+		A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,8 @@
 		A0435C481A13C600004EF945 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A0435C631A13C6A1004EF945 /* SDL_p2p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_p2p.c; sourceTree = "<group>"; };
 		A0435C661A13C6B7004EF945 /* SDL_p2p.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_p2p.h; sourceTree = "<group>"; };
+		A09AE6F01A140E3D00E2EB9A /* SDL_p2p_gamekit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_p2p_gamekit.h; sourceTree = "<group>"; };
+		A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDL_p2p_gamekit.m; sourceTree = "<group>"; };
 		A0C0784E1A13CAB300C1BBA2 /* begin_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = begin_code.h; sourceTree = "<group>"; };
 		A0C0784F1A13CAB300C1BBA2 /* close_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = close_code.h; sourceTree = "<group>"; };
 		A0C078501A13CAB300C1BBA2 /* SDL_assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_assert.h; sourceTree = "<group>"; };
@@ -111,6 +116,8 @@
 		A0C0789F1A13CBBD00C1BBA2 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = "Release-iphonesimulator/libSDL2.a"; sourceTree = "<group>"; };
 		A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A0C078A51A13D3E400C1BBA2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A0C078A91A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_p2p_gamekitdelegate.h; sourceTree = "<group>"; };
+		A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDL_p2p_gamekitdelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +177,7 @@
 		A0435C621A13C6A1004EF945 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A0C078A71A13D4EE00C1BBA2 /* ios */,
 				A0435C631A13C6A1004EF945 /* SDL_p2p.c */,
 			);
 			path = src;
@@ -285,12 +293,31 @@
 			path = build;
 			sourceTree = "<group>";
 		};
+		A0C078A71A13D4EE00C1BBA2 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				A0C078A81A13D53200C1BBA2 /* gamekit */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		A0C078A81A13D53200C1BBA2 /* gamekit */ = {
+			isa = PBXGroup;
+			children = (
+				A0C078A91A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.h */,
+				A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m */,
+				A09AE6F01A140E3D00E2EB9A /* SDL_p2p_gamekit.h */,
+				A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.m */,
+			);
+			path = gamekit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0435C351A13C600004EF945 /* SDL_p2p */ = {
+		A0435C351A13C600004EF945 /* libSDL_p2p */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "SDL_p2p" */;
+			buildConfigurationList = A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "libSDL_p2p" */;
 			buildPhases = (
 				A0435C321A13C600004EF945 /* Sources */,
 				A0435C331A13C600004EF945 /* Frameworks */,
@@ -300,7 +327,7 @@
 			);
 			dependencies = (
 			);
-			name = SDL_p2p;
+			name = libSDL_p2p;
 			productName = SDL_p2p;
 			productReference = A0435C361A13C600004EF945 /* libSDL_p2p.a */;
 			productType = "com.apple.product-type.library.static";
@@ -326,7 +353,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0435C351A13C600004EF945 /* SDL_p2p */,
+				A0435C351A13C600004EF945 /* libSDL_p2p */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m in Sources */,
+				A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.m in Sources */,
+				A087DE5F1A1483FE00AA5D9A /* SDL_p2p.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +430,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/SDL_p2p.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SDL_p2p/SDL_p2p-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../SDL/build/Release-iphoneos\"",
@@ -417,7 +446,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/SDL_p2p.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SDL_p2p/SDL_p2p-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../SDL/build/Release-iphoneos\"",
@@ -441,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "SDL_p2p" */ = {
+		A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "libSDL_p2p" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0435C5C1A13C600004EF945 /* Debug */,

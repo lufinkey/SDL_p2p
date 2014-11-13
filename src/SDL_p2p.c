@@ -1,90 +1,144 @@
 
 #include "SDL_p2p.h"
 
-#import "SDL_syswm.h"
+#if defined(__APPLE__)
+	#include <TargetConditionals.h>
+	#if defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR)
+		#define P2P_PLATFORM_IOS
+		#include "ios/gamekit/SDL_p2p_gamekit.h"
+	#endif
+#endif
 
-UIViewController*SDL_P2P_getViewController(SDL_Window*window)
+P2P_Session* P2P_createSession()
 {
-	SDL_SysWMinfo systemWindowInfo;
-    SDL_VERSION(&systemWindowInfo.version);
-    if (!SDL_GetWindowWMInfo(window, &systemWindowInfo))
-	{
-        // consider doing some kind of error handling here
-        return nil;
-    }
-    UIWindow*appWindow = systemWindowInfo.info.uikit.window;
-    UIViewController*rootViewController = appWindow.rootViewController;
-    return rootViewController;
+#ifdef P2P_PLATFORM_IOS
+	return P2P_gamekit_createSession();
+#endif
 }
 
-void SDL_P2P_setEventHandler(SDL_P2P_EventHandler callback)
+void P2P_destroySession(P2P_Session* session)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_destroySession(session);
+#endif
 }
 
-void SDL_P2P_searchForPeersBluetooth(SDL_Window*parent, const char*sessionID)
+void P2P_searchForPeers(P2P_Session*session, const char*sessionID)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_searchForPeers(session, sessionID);
+#endif
 }
 
-SDL_bool SDL_P2P_isConnected(SDL_Window*parent)
+void P2P_searchForClients(P2P_Session*session, const char*sessionID)
 {
-	return false;
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_searchForClients(session, sessionID);
+#endif
 }
 
-SDL_bool SDL_P2P_isConnectedToPeer(SDL_Window*parent, const char*peerID)
+void P2P_searchForServer(P2P_Session*session, const char*sessionID)
 {
-	return false;
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_searchForServer(session, sessionID);
+#endif
 }
 
-SDL_bool SDL_P2P_acceptConnectionRequest(SDL_Window*parent, const char*peerID)
+void P2P_setEventHandler(P2P_Session*session, P2P_EventHandler callback)
 {
-	return false;
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_setEventHandler(session, callback);
+#endif
 }
 
-void SDL_P2P_denyConnectionRequest(SDL_Window*parent, const char*peerID)
+SDL_bool P2P_isConnected(P2P_Session*session)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	return P2P_gamekit_isConnected(session);
+#else
+	return SDL_FALSE;
+#endif
 }
 
-void SDL_P2P_getPeerDisplayName(SDL_Window*parent, const char*peerID, char*dispName)
+SDL_bool P2P_isConnectedToPeer(P2P_Session*session, const char*peerID)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	return P2P_gamekit_isConnectedToPeer(session, peerID);
+#else
+	return SDL_FALSE;
+#endif
 }
 
-void SDL_P2P_getSelfDisplayName(SDL_Window*parent, char*dispName)
+SDL_bool P2P_acceptConnectionRequest(P2P_Session*session, const char*peerID)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	return P2P_gamekit_acceptConnectionRequest(session, peerID);
+#else
+	return SDL_FALSE;
+#endif
 }
 
-void SDL_P2P_getSelfID(SDL_Window*parent, char*selfID)
+void P2P_denyConnectionRequest(P2P_Session*session, const char*peerID)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_denyConnectionRequest(session, peerID);
+#endif
 }
 
-void SDL_P2P_getSessionID(SDL_Window*parent, char*sessionID)
+void P2P_getPeerDisplayName(P2P_Session*session, const char*peerID, char*dispName)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_getPeerDisplayName(session, peerID, dispName);
+#endif
 }
 
-void SDL_P2P_sendData(SDL_Window*parent, void*data, unsigned int size, SDL_P2P_SendDataMode mode)
+void P2P_getSelfDisplayName(P2P_Session*session, char*dispName)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_getSelfDisplayName(session, dispName);
+#endif
 }
 
-void SDL_P2P_sendDataToPeers(SDL_Window*parent, char**peers, unsigned int numPeers, void*data, unsigned int size, SDL_P2P_SendDataMode mode)
+void P2P_getSelfID(P2P_Session*session, char*selfID)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_getSelfID(session, selfID);
+#endif
 }
 
-void SDL_P2P_disconnectPeer(SDL_Window*parent, const char*peerID)
+void P2P_getSessionID(P2P_Session*session, char*sessionID)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_getSessionID(session, sessionID);
+#endif
 }
 
-void SDL_P2P_endSession(SDL_Window*parent)
+void P2P_sendData(P2P_Session*session, void*data, unsigned int size, P2P_SendDataMode mode)
 {
-	//
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_sendData(session, data, size, mode);
+#endif
+}
+
+void P2P_sendDataToPeers(P2P_Session*session, char**peers, unsigned int numPeers, void*data, unsigned int size, P2P_SendDataMode mode)
+{
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_sendDataToPeers(session, peers, numPeers, data, size, mode);
+#endif
+}
+
+void P2P_disconnectPeer(P2P_Session*session, const char*peerID)
+{
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_disconnectPeer(session, peerID);
+#endif
+}
+
+void P2P_endSession(P2P_Session*session)
+{
+#ifdef P2P_PLATFORM_IOS
+	P2P_gamekit_endSession(session);
+#endif
 }
 
 
