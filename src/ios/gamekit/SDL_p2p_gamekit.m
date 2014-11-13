@@ -16,6 +16,8 @@ void P2P_gamekit_destroySession(P2P_Session*session)
 		[session->gk_delegate disconnectFromPeers];
 	}
 	
+	[session->gk_delegate release];
+	
 	free(session);
 }
 
