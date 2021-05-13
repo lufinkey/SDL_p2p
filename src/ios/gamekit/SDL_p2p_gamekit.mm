@@ -3,7 +3,7 @@
 
 P2P_Session* P2P_gamekit_createSession()
 {
-	P2P_Session* p2pSession = malloc(sizeof(P2P_Session));
+	P2P_Session* p2pSession = (P2P_Session*)malloc(sizeof(P2P_Session));
 	p2pSession->event_callback = NULL;
 	p2pSession->gk_delegate = [[SDL_p2p_gamekitdelegate alloc] initWithSession:p2pSession];
 	return p2pSession;
@@ -16,8 +16,6 @@ void P2P_gamekit_destroySession(P2P_Session*session)
 		[session->gk_delegate disconnectFromPeers];
 	}
 	
-	[session->gk_delegate release];
-	
 	free(session);
 }
 
@@ -25,7 +23,6 @@ void P2P_gamekit_searchForPeers(P2P_Session*session, const char*sessionID)
 {
 	NSString* sessionIDStr = [[NSString alloc] initWithUTF8String:sessionID];
 	[session->gk_delegate setSessionID:sessionIDStr];
-	[sessionIDStr release];
 	[session->gk_delegate connectToPeers];
 }
 
@@ -33,7 +30,6 @@ void P2P_gamekit_searchForClients(P2P_Session*session, const char*sessionID)
 {
 	NSString* sessionIDStr = [[NSString alloc] initWithUTF8String:sessionID];
 	[session->gk_delegate setSessionID:sessionIDStr];
-	[sessionIDStr release];
 	[session->gk_delegate connectToClients];
 }
 
@@ -41,7 +37,6 @@ void P2P_gamekit_searchForServer(P2P_Session*session, const char*sessionID)
 {
 	NSString* sessionIDStr = [[NSString alloc] initWithUTF8String:sessionID];
 	[session->gk_delegate setSessionID:sessionIDStr];
-	[sessionIDStr release];
 	[session->gk_delegate connectToServer];
 }
 
@@ -64,10 +59,8 @@ SDL_bool P2P_gamekit_isConnectedToPeer(P2P_Session*session, const char*peerID)
 	NSString* peerIDStr = [[NSString alloc] initWithUTF8String:peerID];
 	if([session->gk_delegate isConnectedToPeer:peerIDStr])
 	{
-		[peerIDStr release];
 		return SDL_TRUE;
 	}
-	[peerIDStr release];
 	return SDL_FALSE;
 }
 
@@ -77,10 +70,8 @@ SDL_bool P2P_gamekit_acceptConnectionRequest(P2P_Session*session, const char*pee
 	//TODO add error handler in here
 	if([session->gk_delegate acceptConnectionFromPeer:peerIDStr error:nil])
 	{
-		[peerIDStr release];
 		return SDL_TRUE;
 	}
-	[peerIDStr release];
 	return SDL_FALSE;
 }
 
@@ -88,7 +79,6 @@ void P2P_gamekit_denyConnectionRequest(P2P_Session*session, const char*peerID)
 {
 	NSString* peerIDStr = [[NSString alloc] initWithUTF8String:peerID];
 	[session->gk_delegate denyConnectionFromPeer:peerIDStr];
-	[peerIDStr release];
 }
 
 void P2P_gamekit_getSelfDisplayName(P2P_Session*session, char*dispName)
@@ -100,7 +90,6 @@ void P2P_gamekit_getPeerDisplayName(P2P_Session*session, const char*peerID, char
 {
 	NSString* peerIDStr = [[NSString alloc] initWithUTF8String:peerID];
 	strcpy(dispName, [[session->gk_delegate displayNameForPeer:peerIDStr] UTF8String]);
-	[peerIDStr release];
 }
 
 void P2P_gamekit_getSelfID(P2P_Session*session, char*selfID)
@@ -142,14 +131,12 @@ void P2P_gamekit_sendDataToPeers(P2P_Session*session, char**peers, unsigned int 
 	{
 		[session->gk_delegate sendData:[NSData dataWithBytes:data length:size] toPeers:peerArray withDataMode:GKSendDataUnreliable error:nil];
 	}
-	[peerArray release];
 }
 
 void P2P_gamekit_disconnectPeer(P2P_Session*session, const char*peerID)
 {
 	NSString* peerIDStr = [[NSString alloc] initWithUTF8String:peerID];
 	[session->gk_delegate disconnectPeer:peerIDStr];
-	[peerIDStr release];
 }
 
 void P2P_gamekit_endSession(P2P_Session*session)

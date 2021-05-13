@@ -23,21 +23,9 @@
 	return self;
 }
 
-- (void)dealloc
-{
-	if(peerPicker!=nil)
-	{
-		[peerPicker release];
-	}
-	[sessionID release];
-	[peers release];
-	[super dealloc];
-}
-
 - (void)setSessionID:(NSString *)sessID
 {
-	[sessionID release];
-	sessionID = [sessID retain];
+	sessionID = sessID;
 }
 
 - (NSString*)sessionID
@@ -67,7 +55,7 @@
 		sessionMode = GKSessionModePeer;
 		peerPicker = [[GKPeerPickerController alloc] init];
 		peerPicker.delegate = self;
-		peerPicker.connectionTypesMask = GKPeerPickerConnectionTypeNearby | GKPeerPickerConnectionTypeOnline;
+		peerPicker.connectionTypesMask = (GKPeerPickerConnectionType)(GKPeerPickerConnectionTypeNearby | GKPeerPickerConnectionTypeOnline);
 		[peerPicker show];
 	}
 }
@@ -136,7 +124,6 @@
 	if(peerPicker!=nil)
 	{
 		[peerPicker dismiss];
-		[peerPicker release];
 		peerPicker = nil;
 	}
 }
@@ -175,7 +162,7 @@
 	GKSession* session = [[GKSession alloc] initWithSessionID:sessionID displayName:nil sessionMode:sessionMode];
 	gkSession = session;
 	session.delegate = self;
-    return [session autorelease];
+    return session;
 }
 
 - (void)peerPickerController:(GKPeerPickerController *)picker didConnectPeer:(NSString *)peerID toSession:(GKSession *)session

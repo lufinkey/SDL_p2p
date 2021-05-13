@@ -1,4 +1,6 @@
 
+#pragma once
+
 #import <GameKit/GameKit.h>
 #import "SDL_p2p.h"
 

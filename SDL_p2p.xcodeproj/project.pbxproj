@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A0435C3A1A13C600004EF945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0435C391A13C600004EF945 /* Foundation.framework */; };
-		A087DE5F1A1483FE00AA5D9A /* SDL_p2p.c in Sources */ = {isa = PBXBuildFile; fileRef = A0435C631A13C6A1004EF945 /* SDL_p2p.c */; };
-		A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.m in Sources */ = {isa = PBXBuildFile; fileRef = A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.m */; };
+		A087DE5F1A1483FE00AA5D9A /* SDL_p2p.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0435C631A13C6A1004EF945 /* SDL_p2p.cpp */; };
+		A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.mm in Sources */ = {isa = PBXBuildFile; fileRef = A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.mm */; };
 		A0C0789D1A13CBB300C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789C1A13CBB300C1BBA2 /* libSDL2.a */; };
 		A0C078A01A13CBBD00C1BBA2 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0789F1A13CBBD00C1BBA2 /* libSDL2.a */; };
 		A0C078A41A13D3DE00C1BBA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */; };
 		A0C078A61A13D3E400C1BBA2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A51A13D3E400C1BBA2 /* GameKit.framework */; };
-		A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m */; };
+		A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,13 +30,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A0435C361A13C600004EF945 /* libSDL_p2p.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDL_p2p.a; path = liblibSDL_p2p.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0435C361A13C600004EF945 /* libSDL_p2p.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDL_p2p.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0435C391A13C600004EF945 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A0435C481A13C600004EF945 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		A0435C631A13C6A1004EF945 /* SDL_p2p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_p2p.c; sourceTree = "<group>"; };
+		A0435C631A13C6A1004EF945 /* SDL_p2p.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SDL_p2p.cpp; sourceTree = "<group>"; };
 		A0435C661A13C6B7004EF945 /* SDL_p2p.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_p2p.h; sourceTree = "<group>"; };
 		A09AE6F01A140E3D00E2EB9A /* SDL_p2p_gamekit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_p2p_gamekit.h; sourceTree = "<group>"; };
-		A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDL_p2p_gamekit.m; sourceTree = "<group>"; };
+		A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SDL_p2p_gamekit.mm; sourceTree = "<group>"; };
 		A0C0784E1A13CAB300C1BBA2 /* begin_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = begin_code.h; sourceTree = "<group>"; };
 		A0C0784F1A13CAB300C1BBA2 /* close_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = close_code.h; sourceTree = "<group>"; };
 		A0C078501A13CAB300C1BBA2 /* SDL_assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_assert.h; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A0C078A51A13D3E400C1BBA2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A0C078A91A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_p2p_gamekitdelegate.h; sourceTree = "<group>"; };
-		A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDL_p2p_gamekitdelegate.m; sourceTree = "<group>"; };
+		A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SDL_p2p_gamekitdelegate.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,6 @@
 			children = (
 				A0435C651A13C6B7004EF945 /* include */,
 				A0435C621A13C6A1004EF945 /* src */,
-				A0435C501A13C600004EF945 /* test */,
 				A0C0784C1A13CA5600C1BBA2 /* SDL */,
 				A0435C381A13C600004EF945 /* Frameworks */,
 				A0435C371A13C600004EF945 /* Products */,
@@ -167,18 +166,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A0435C501A13C600004EF945 /* test */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
 		A0435C621A13C6A1004EF945 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				A0C078A71A13D4EE00C1BBA2 /* ios */,
-				A0435C631A13C6A1004EF945 /* SDL_p2p.c */,
+				A0435C631A13C6A1004EF945 /* SDL_p2p.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -305,9 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				A0C078A91A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.h */,
-				A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m */,
+				A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm */,
 				A09AE6F01A140E3D00E2EB9A /* SDL_p2p_gamekit.h */,
-				A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.m */,
+				A09AE6F41A1412EA00E2EB9A /* SDL_p2p_gamekit.mm */,
 			);
 			path = gamekit;
 			sourceTree = "<group>";
@@ -347,6 +339,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = A0435C2D1A13C600004EF945;
@@ -364,9 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.m in Sources */,
-				A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.m in Sources */,
-				A087DE5F1A1483FE00AA5D9A /* SDL_p2p.c in Sources */,
+				A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm in Sources */,
+				A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.mm in Sources */,
+				A087DE5F1A1483FE00AA5D9A /* SDL_p2p.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,8 +370,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -393,13 +387,12 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -407,8 +400,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -416,12 +410,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				SDKROOT = iphoneos4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

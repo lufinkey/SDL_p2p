@@ -1,4 +1,6 @@
 
+#pragma once
+
 #ifndef _SDL_P2P_gamekit_GAMEKIT_H
 #define _SDL_P2P_gamekit_GAMEKIT_H
 
