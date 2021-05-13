@@ -53,3 +53,12 @@ Temporary Items
 Debug/
 Release/
 build/
+
+#CodeLite
+/projects/codelite/.*
+/projects/codelite/Debug
+/projects/codelite/Release
+/projects/codelite/Makefile
+/projects/codelite/*.txt
+/projects/codelite/*.mk
+
