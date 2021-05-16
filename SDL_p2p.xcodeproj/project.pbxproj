@@ -15,6 +15,7 @@
 		A0C078A41A13D3DE00C1BBA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A31A13D3DE00C1BBA2 /* UIKit.framework */; };
 		A0C078A61A13D3E400C1BBA2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C078A51A13D3E400C1BBA2 /* GameKit.framework */; };
 		A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm */; };
+		A519765D2651D9250015D996 /* SDL_p2p.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0435C631A13C6A1004EF945 /* SDL_p2p.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +119,7 @@
 		A0C078A51A13D3E400C1BBA2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A0C078A91A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_p2p_gamekitdelegate.h; sourceTree = "<group>"; };
 		A0C078AA1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SDL_p2p_gamekitdelegate.mm; sourceTree = "<group>"; };
+		A51975662651D3A80015D996 /* libSDL_p2p.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDL_p2p.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,13 @@
 				A0C078A41A13D3DE00C1BBA2 /* UIKit.framework in Frameworks */,
 				A0C0789D1A13CBB300C1BBA2 /* libSDL2.a in Frameworks */,
 				A0C078A01A13CBBD00C1BBA2 /* libSDL2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51975642651D3A80015D996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A0435C361A13C600004EF945 /* libSDL_p2p.a */,
+				A51975662651D3A80015D996 /* libSDL_p2p.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,10 +316,20 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A51975622651D3A80015D996 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		A0435C351A13C600004EF945 /* libSDL_p2p */ = {
+		A0435C351A13C600004EF945 /* libSDL_p2p-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "libSDL_p2p" */;
+			buildConfigurationList = A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "libSDL_p2p-iOS" */;
 			buildPhases = (
 				A0435C321A13C600004EF945 /* Sources */,
 				A0435C331A13C600004EF945 /* Frameworks */,
@@ -319,10 +339,27 @@
 			);
 			dependencies = (
 			);
-			name = libSDL_p2p;
+			name = "libSDL_p2p-iOS";
 			productInstallPath = /usr/local/lib;
 			productName = "Static Library";
 			productReference = A0435C361A13C600004EF945 /* libSDL_p2p.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A51975652651D3A80015D996 /* libSDL_p2p */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A519756C2651D3A90015D996 /* Build configuration list for PBXNativeTarget "libSDL_p2p" */;
+			buildPhases = (
+				A51975622651D3A80015D996 /* Headers */,
+				A51975632651D3A80015D996 /* Sources */,
+				A51975642651D3A80015D996 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libSDL_p2p;
+			productName = SDL_p2p;
+			productReference = A51975662651D3A80015D996 /* libSDL_p2p.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -333,6 +370,13 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Luis Finke";
+				TargetAttributes = {
+					A51975652651D3A80015D996 = {
+						CreatedOnToolsVersion = 12.4;
+						DevelopmentTeam = RL98QGQJCL;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = A0435C311A13C600004EF945 /* Build configuration list for PBXProject "SDL_p2p" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -347,7 +391,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0435C351A13C600004EF945 /* libSDL_p2p */,
+				A0435C351A13C600004EF945 /* libSDL_p2p-iOS */,
+				A51975652651D3A80015D996 /* libSDL_p2p */,
 			);
 		};
 /* End PBXProject section */
@@ -360,6 +405,14 @@
 				A0C078AB1A13D5BB00C1BBA2 /* SDL_p2p_gamekitdelegate.mm in Sources */,
 				A09AE6F51A1412EA00E2EB9A /* SDL_p2p_gamekit.mm in Sources */,
 				A087DE5F1A1483FE00AA5D9A /* SDL_p2p.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51975632651D3A80015D996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A519765D2651D9250015D996 /* SDL_p2p.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +504,101 @@
 			};
 			name = Release;
 		};
+		A519756D2651D3A90015D996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RL98QGQJCL;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A519756E2651D3A90015D996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RL98QGQJCL;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -463,11 +611,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "libSDL_p2p" */ = {
+		A0435C5B1A13C600004EF945 /* Build configuration list for PBXNativeTarget "libSDL_p2p-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0435C5C1A13C600004EF945 /* Debug */,
 				A0435C5D1A13C600004EF945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A519756C2651D3A90015D996 /* Build configuration list for PBXNativeTarget "libSDL_p2p" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A519756D2651D3A90015D996 /* Debug */,
+				A519756E2651D3A90015D996 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

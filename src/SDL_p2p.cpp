@@ -3,7 +3,7 @@
 
 #if defined(__APPLE__)
 	#include <TargetConditionals.h>
-	#if defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR)
+	#if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
 		#define P2P_PLATFORM_IOS
 		#include "ios/gamekit/SDL_p2p_gamekit.h"
 	#endif
